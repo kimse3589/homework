@@ -58,7 +58,7 @@ int main( void)
 		recvfrom(sock, &pk,sizeof(pk),0,(struct sockaddr*)&client_addr,&client_addr_size);
 		
 		clock_gettime(CLOCK_MONOTONIC, &ts_start);
-		printf("\"%d %d\n",pk.packetNumber,ts_start.tv_sec);
+		printf("\"%lf %d\n",pk.packetNumber,ts_start.tv_sec);
 	}
 
 	return 0;
