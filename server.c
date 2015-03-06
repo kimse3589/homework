@@ -54,11 +54,10 @@ int main( void)
 
 	while(1)
 	{
-		printf("waiting....");
 		recvfrom(sock, &pk,sizeof(pk),0,(struct sockaddr*)&client_addr,&client_addr_size);
 		
 		clock_gettime(CLOCK_MONOTONIC, &ts_start);
-		printf("\"%d %lf\n",pk.packetNumber,ts_start.tv_sec);
+		printf("\"%d %d\n",pk.packetNumber,ts_start.tv_sec);
 	}
 
 	return 0;
